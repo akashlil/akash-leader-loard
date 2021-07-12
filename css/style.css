@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f3f1ff;
+  margin: 0;
+  padding: 0px;
+}
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+hr {
+  margin: 29px 0px;
+  border-top: 1px solid #9c9a9ace;
+}
+p {
+  margin: 0;
+}
+span {
+  font-size: 15px;
+}
+.container {
+  background-color: #ffffff;
+  width: 870px;
+  padding: 33px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+/* ........header-idea................................. */
+.header-idea {
+  background-color: #562eff;
+  margin-bottom: 36px;
+}
+.header-all-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+.header-nav a,
+.header-logo p {
+  padding: 0 10px;
+  color: #ffffffe0;
+  text-decoration: none;
+}
+.header-logo img {
+  width: 40.42px;
+  height: 51px;
+}
+/*.................. players start................................................................................. */
+.player-header {
+  margin-top: 0px;
+  margin-bottom: 40px;
+  color: #562eff;
+}
+.players {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 94px;
+  grid-row-gap: 30px;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+}
+.player-image img {
+  width: 56px;
+  height: 56px;
+}
+.player-titell > h3 {
+  margin-left: 16px;
+  font-size: 18px;
+  color: #000000;
+  font-weight: 500;
+}
+/*.................. players end................................................................................. */
+.all-blog {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 16px;
+}
+.single-blog {
+  display: flex;
+  align-items: center;
+}
+
+.single-blog-img img {
+  width: 177px;
+  height: 117px;
+  margin-right: 16px;
+}
+
+.single-blog-title h3 {
+  color: #000000;
+  margin: 0 0 6px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+.single-blog-title p {
+  margin: 0px;
+  color: #9f9f9f;
+}
+.single-blog-title span {
+  color: #562eff;
+  font-size: 16px;
+}
+
+/*..........................Lates Course........................ */
+.lates-course-header {
+  margin-bottom: 24px;
+  color: #562eff;
+}
+.all-lates-course {
+  display: flex;
+}
+.single-course {
+  margin: 0 10px;
+  box-shadow: 0px 2px 3px 0px rgba(241, 239, 239, 0.705);
+  border-radius: 5px;
+}
+.single-course-img img {
+  width: 224px;
+  height: 104px;
+}
+.single-course-title h3 {
+  color: #1e1e1e;
+  margin-bottom: 7px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.single-course-rating {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.fas-color > i {
+  color: #ffc014;
+  font-size: 10px;
+}
+.fas-color > span {
+  color: #9f9f9f;
+}
+.clock-about {
+  background-color: #ff4a4a2c;
+  border-radius: 15px;
+  color: #ff4a4ae8;
+  padding: 3px 5px;
+  font-size: 14px;
+}
+
+/* media screen  */
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+
+  /* ...............top player.............. */
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .player {
+    flex-direction: column;
+  }
+  /* ..............top blog............... */
+  .all-blog {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .single-blog {
+    flex-direction: column;
+  }
+  /* ...........Lates Course ..............*/
+  .all-lates-course {
+    flex-direction: column;
+  }
+  .single-course {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 980px) {
+  .container {
+    width: 100%;
+    margin-right: 20px;
+  }
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-evenly;
+  }
+  .player {
+    justify-content: space-evenly;
+  }
+  .all-blog {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
+  .single-blog {
+    justify-content: space-evenly;
+  }
+  .all-lates-course {
+    flex-direction: column;
+  }
+  .single-course {
+    margin-bottom: 20px;
+  }
+}
