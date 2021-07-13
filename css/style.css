@@ -24,6 +24,9 @@ p {
 span {
   font-size: 15px;
 }
+.captallatter {
+  text-transform: uppercase;
+}
 .container {
   background-color: #ffffff;
   width: 870px;
@@ -45,12 +48,12 @@ span {
 .header-logo {
   display: flex;
   align-items: center;
-  margin-left: 40px;
+  /* margin-left: 30px; */
 }
 .header-nav {
   display: flex;
   align-items: center;
-  margin-right: 40px;
+  /* margin-right: 30px; */
 }
 .header-nav a,
 .header-logo p {
@@ -164,7 +167,36 @@ span {
   padding: 3px 5px;
   font-size: 14px;
 }
-
+/* .................footer............................................... */
+.footer-all {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff57;
+  padding-bottom: 20px;
+}
+.fast-footer {
+  margin-left: 60px;
+}
+.foot-new {
+  margin-right: 60px;
+}
+.foot-logo {
+  margin-left: 50px;
+}
+.foot-logo a {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background-color: springgreen;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.foot-logo a:hover {
+  background-color: rgb(205, 210, 230);
+}
 /* media screen  */
 
 @media only screen and (max-width: 600px) {
@@ -193,6 +225,19 @@ span {
   .single-course {
     margin-bottom: 20px;
   }
+  .footer-all {
+    margin-left: 30px;
+    flex-direction: column;
+  }
+  .fast-footer {
+    margin-left: 0px;
+  }
+  .foot-logo {
+    margin-left: 0px;
+  }
+  .foot-new {
+    margin-right: 0px;
+  }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 980px) {
@@ -219,5 +264,12 @@ span {
   }
   .single-course {
     margin-bottom: 20px;
+  }
+  .footer-all {
+    height: 180px;
+    margin-left: 10px;
+  }
+  .foot-logo {
+    margin-left: 0px;
   }
 }
