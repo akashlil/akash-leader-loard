@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
+:root {
+  --background-color: red;
+}
 * {
   box-sizing: border-box;
 }
@@ -24,8 +27,10 @@ p {
 span {
   font-size: 15px;
 }
+
 .captallatter {
   text-transform: uppercase;
+  font-weight: 400;
 }
 .container {
   background-color: #ffffff;
@@ -36,8 +41,10 @@ span {
 }
 /* ........header-idea................................. */
 .header-idea {
-  background-color: #562eff;
+  background-color: var(--background-color);
   margin-bottom: 36px;
+  position: sticky;
+  top: 0;
 }
 .header-all-data {
   display: flex;
@@ -69,7 +76,7 @@ span {
 .player-header {
   margin-top: 0px;
   margin-bottom: 40px;
-  color: #562eff;
+  color: var(--background-color);
 }
 .players {
   display: grid;
@@ -120,14 +127,14 @@ span {
   color: #9f9f9f;
 }
 .single-blog-title span {
-  color: #562eff;
+  color: var(--background-color);
   font-size: 16px;
 }
 
 /*..........................Lates Course........................ */
 .lates-course-header {
   margin-bottom: 24px;
-  color: #562eff;
+  color: var(--background-color);
 }
 .all-lates-course {
   display: flex;
@@ -168,18 +175,31 @@ span {
   font-size: 14px;
 }
 /* .................footer............................................... */
+
+.footer-head {
+  border-bottom: 2px solid var(--background-color);
+  height: 100px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  line-height: 100px;
+  margin-bottom: 50px;
+}
+.footer-head > h2 {
+  font-weight: 700;
+  font-size: 20px;
+}
 .footer-all {
   display: flex;
   justify-content: space-around;
-  background-color: #ffffff57;
+  background-color: #8b868628;
   padding-bottom: 20px;
 }
 .fast-footer {
   margin-left: 60px;
+  border-left: 2px solid var(--background-color);
+  padding: 0px 20px;
 }
-.foot-new {
-  margin-right: 60px;
-}
+
 .foot-logo {
   margin-left: 50px;
 }
@@ -195,15 +215,52 @@ span {
   margin-left: 10px;
 }
 .foot-logo a:hover {
-  background-color: rgb(205, 210, 230);
+  background-color: rgb(194, 199, 216);
 }
+.fab {
+  color: var(--background-color);
+}
+.foot-new {
+  margin-right: 60px;
+  border-left: 2px solid var(--background-color);
+  padding: 0px 20px;
+}
+.footer-a a {
+  color: var(--background-color);
+  font-size: 18px;
+}
+
+.footer-last {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 2px solid var(--background-color);
+  height: 150px;
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.699);
+  justify-content: center;
+}
+.footer-last ul {
+  padding: 0;
+}
+.footer-last li,
+.footer-last a {
+  text-decoration: none;
+  list-style: none;
+  display: inline-block;
+  padding: 6px;
+}
+
 /* media screen  */
 
 @media only screen and (max-width: 600px) {
   .container {
     width: 100%;
   }
-
+  .captallatter {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+  }
   /* ...............top player.............. */
   .players {
     grid-template-columns: repeat(2, 1fr);
@@ -225,15 +282,19 @@ span {
   .single-course {
     margin-bottom: 20px;
   }
+  /* .........footer.............. */
   .footer-all {
-    margin-left: 30px;
+    /* margin-left: 30px; */
     flex-direction: column;
   }
   .fast-footer {
-    margin-left: 0px;
+    margin-left: 30px;
   }
   .foot-logo {
     margin-left: 0px;
+  }
+  .foot-new {
+    margin-left: 30px;
   }
   .foot-new {
     margin-right: 0px;
